@@ -4,6 +4,17 @@ const app = express();
 const port = 8000;
 const passport = require("passport");
 const passportJWT = require("./config/passport-jwt-strategy");
+const bodyParser = require("body-parser");
+
+app.use(
+  bodyParser.urlencoded({
+    extended: false,
+  })
+);
+app.use(bodyParser.json());
+
+// Passport middleware
+app.use(passport.initialize());
 
 app.use("/", require("./routes"));
 
