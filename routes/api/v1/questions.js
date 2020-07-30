@@ -10,5 +10,10 @@ router.delete(
   passport.authenticate("jwt", { session: false }),
   questionsApi.destroy
 );
+router.post(
+  "/create",
+  passport.authenticate("jwt", { session: false }),
+  questionsApi.create
+);
 
 module.exports = router;
