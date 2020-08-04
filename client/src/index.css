@@ -281,7 +281,7 @@ nav .nav-links ul li:hover {
   z-index: 100;
   max-height: 452px;
   overflow: scroll;
-  display: none;
+  /* display: none; */
 }
 .search-results ul {
   list-style-type: none;
@@ -512,7 +512,7 @@ nav .nav-links ul li:hover {
   height: 42px;
   left: 111.5px;
   top: 0px;
-  background: #776b62;
+  background: #ef7917;
   border-radius: 3px;
   color: #fff;
   font-size: 16px;
