@@ -1,19 +1,19 @@
 const mongoose = require("mongoose");
 
-const answerSchema = new mongoose.Schema(
+const commentSchema = new mongoose.Schema(
   {
     content: {
       type: String,
       required: true,
     },
-    // answers belong to a user
+    // comment belong to a user
     user: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
     },
-    question: {
+    post: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Question",
+      ref: "Post",
     },
   },
   {
@@ -21,5 +21,5 @@ const answerSchema = new mongoose.Schema(
   }
 );
 
-const Answer = mongoose.model("Answer", answerSchema);
-module.exports = Answer;
+const Comment = mongoose.model("Comment", commentSchema);
+module.exports = Comment;

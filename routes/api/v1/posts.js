@@ -2,18 +2,18 @@ const express = require("express");
 
 const router = express.Router();
 const passport = require("passport");
-const questionsApi = require("../../../controllers/api/v1/questions_api");
+const postsApi = require("../../../controllers/api/v1/posts_api");
 
-router.get("/", questionsApi.index);
+router.get("/", postsApi.index);
 router.delete(
   "/:id",
   passport.authenticate("jwt", { session: false }),
-  questionsApi.destroy
+  postsApi.destroy
 );
 router.post(
   "/create",
   passport.authenticate("jwt", { session: false }),
-  questionsApi.create
+  postsApi.create
 );
 
 module.exports = router;
