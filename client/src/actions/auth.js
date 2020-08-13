@@ -99,7 +99,7 @@ export function signup(email, password, confirmPassword, name) {
   };
 }
 
-export function startSingup() {
+export function startSignup() {
   return {
     type: SIGNUP_START,
   };
@@ -156,7 +156,7 @@ export function editUser(name, password, confirmPassword, userId) {
         id: userId,
       }),
     })
-      .then((repsonse) => repsonse.json())
+      .then((response) => response.json())
       .then((data) => {
         console.log("EDIT PROFIle data", data);
         if (data.success) {

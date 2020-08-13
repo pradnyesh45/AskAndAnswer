@@ -4,13 +4,13 @@ import {
   FETCH_USER_PROFILE,
 } from "../actions/actionTypes";
 
-const initalProfileState = {
+const initialProfileState = {
   user: {},
   error: null,
   success: null,
   inProgress: false,
 };
-export default function profile(state = initalProfileState, action) {
+export default function profile(state = initialProfileState, action) {
   switch (action.type) {
     case USER_PROFILE_SUCCESS:
       return {

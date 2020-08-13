@@ -2,7 +2,7 @@ const express = require("express");
 
 const router = express.Router();
 const passport = require("passport");
-const commentsApi = require("../../../controllers/api/v1/commnets_api");
+const commentsApi = require("../../../controllers/api/v1/comments_api");
 
 // router.get("/", questionsApi.index);
 router.delete(

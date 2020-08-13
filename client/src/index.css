@@ -42,12 +42,12 @@ code {
 }
 
 .error-dailog {
-  color: #721c24;
+  color: #199123;
   background-color: #f8d7da;
   border-color: #f5c6cb;
 }
 .success-dailog {
-  color: #155724;
+  color: #208337;
   background-color: #d4edda;
   border-color: #c3e6cb;
 }
@@ -75,7 +75,7 @@ code {
   height: 40px;
 }
 .post-avatar .post-author {
-  color: #616161;
+  color: #1d9e39;
   /* font-family: Open Sans; */
   font-style: normal;
   font-weight: 600;
@@ -195,10 +195,13 @@ code {
 /* NAVBAR */
 .nav {
   display: flex;
-  background: #6200ee;
+  background: #1ea819;
   padding: 10px 20px;
   align-items: center;
   justify-content: space-between;
+}
+.nav .left-div img {
+  height: 60px;
 }
 .logo {
   color: #fff;
@@ -206,7 +209,7 @@ code {
 }
 .logo-icons {
   font-size: 40px;
-  color: #ece60e;
+  color: #2ae718;
 }
 nav #user-dp {
   height: 40px;
@@ -364,7 +367,7 @@ nav .nav-links ul li:hover {
 .login-signup-header {
   font-weight: 600;
   font-size: 30px;
-  color: #ef7917;
+  color: #1ed82e;
 }
 .login-form {
   background-color: #fff;
@@ -397,7 +400,7 @@ nav .nav-links ul li:hover {
 .field button {
   width: 100%;
   margin-top: 20px;
-  background: #ef7917;
+  background: #15ac2e;
   border-radius: 2px;
   color: #fff;
   font-size: 20px;
@@ -450,18 +453,18 @@ nav .nav-links ul li:hover {
   outline: none;
 }
 .settings .edit-btn {
-  border: 1px solid #ef7917;
+  border: 1px solid #1ac23e;
   box-sizing: border-box;
-  color: #ef7917;
+  color: #1db62a;
 }
 .settings .save-btn {
-  background: #ef7917;
+  background: #38bb1e;
   color: #fff;
   border: none;
   padding: 10px 20px;
 }
 .settings .go-back {
-  color: #ef7917;
+  color: #2cc03f;
   margin-top: 7px;
   font-size: 13px;
 }
@@ -512,7 +515,7 @@ nav .nav-links ul li:hover {
   height: 42px;
   left: 111.5px;
   top: 0px;
-  background: #ef7917;
+  background: #13a520;
   border-radius: 3px;
   color: #fff;
   font-size: 16px;

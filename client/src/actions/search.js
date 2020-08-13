@@ -12,7 +12,7 @@ export function searchUsers(searchText) {
         Authorization: `Bearer ${getAuthTokenFromLocalStorage()}`,
       },
     })
-      .then((repsonse) => repsonse.json())
+      .then((response) => response.json())
       .then((data) => {
         console.log("SEARCH data", data);
         if (data.success) {

@@ -31,7 +31,7 @@ class CreatePost extends Component {
 
         <div>
           <button id="add-post-btn" onClick={this.handleOnClick}>
-            Add Post
+            Ask Question
           </button>
         </div>
       </div>

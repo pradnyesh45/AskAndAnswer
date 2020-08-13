@@ -1,8 +1,8 @@
-const API_ROOT = "http//localhost:8000/api/v1";
+const API_ROOT = "http://localhost:8000/api/v1";
 
 export const APIUrls = {
-  login: () => `${API_ROOT}/users/create-session`,
-  signup: () => `${API_ROOT}/users/create`,
+  login: () => `${API_ROOT}/users/login`,
+  signup: () => `${API_ROOT}/users/signup`,
   editProfile: () => `${API_ROOT}/users/edit`,
   fetchPosts: (page = 1, limit = 25) =>
     `${API_ROOT}/posts?page=${page}&limit=${limit}`,

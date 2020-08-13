@@ -21,10 +21,14 @@ class Navbar extends React.Component {
     const { auth, results } = this.props;
     return (
       <nav className="nav">
+        <div>Creator: Pradnyesh Aglawe</div>
         <div className="left-div">
+          <span>
+            <span>Click on logo for Home</span>
+          </span>
           <Link to="/">
             <img
-              src="https://ninjasfiles.s3.amazonaws.com/0000000000003454.png"
+              src="https://www.flaticon.com/premium-icon/icons/svg/3173/3173808.svg"
               alt="logo"
             />
           </Link>
