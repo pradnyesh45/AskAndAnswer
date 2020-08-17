@@ -88,3 +88,5 @@ module.exports.createSession = function (req, res) {
     });
   });
 };
+
+module.exports.signUp = function (req, res) {};
