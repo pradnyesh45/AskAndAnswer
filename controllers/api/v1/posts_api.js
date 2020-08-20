@@ -12,28 +12,30 @@ module.exports.index = async function (req, res) {
   });
 };
 
-// module.exports.destroy = async function (req, res) {
-//   try {
-//     let question = await Question.findById(req.params.id);
+module.exports.destroy = async function (req, res) {
+  try {
+    let post = await Post.findById(req.params.id);
 
-//     if (question.user == req.user.id) {
-//       question.remove();
+    if (post.user == req.user.id) {
+      post.remove();
 
-//       return res.status(200).json({
-//         message: "Question deleted",
-//       });
-//     } else {
-//       return res.status(401).json({
-//         message: "You cannot delete this question!",
-//       });
-//     }
-//   } catch (err) {
-//     console.log("******", err);
-//     return res.status(200).json({
-//       message: "Internal server error while deleting question",
-//     });
-//   }
-// };
+      await Comment.deleteMany({ post: req.params.id });
+
+      return res.json(200, {
+        message: "Post and associated comments deleted successfully!",
+      });
+    } else {
+      return res.json(401, {
+        message: "You cannot delete this post!",
+      });
+    }
+  } catch (err) {
+    console.log("********", err);
+    return res.json(500, {
+      message: "Internal Server Error",
+    });
+  }
+};
 
 module.exports.create = async function (req, res) {
   // let isCreated = false;
@@ -46,15 +48,13 @@ module.exports.create = async function (req, res) {
     post = await post.populate("user", "name").execPopulate();
     // if (isCreated) {
     return res.status(200).json({
+      data: {
+        post: post,
+      },
       message: "Post successfully created",
     });
-    // } else {
-    //   return res.status(400).json({
-    //     message: "Question could not be created",
-    //   });
-    // }
   } catch (error) {
-    console.log("******", err);
+    console.log("******", error);
     return res.status(200).json({
       message: "Internal server error while deleting question",
     });

@@ -1,4 +1,6 @@
-const API_ROOT = "http://localhost:8000/api/v1";
+const proxyurl = "https://cors-anywhere.herokuapp.com/";
+const url = "http://localhost:8000/api/v1";
+const API_ROOT = proxyurl + url;
 
 export const APIUrls = {
   login: () => `${API_ROOT}/users/login`,
