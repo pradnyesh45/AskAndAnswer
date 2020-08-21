@@ -10,7 +10,7 @@ router.post(
   passport.authenticate("jwt", { session: false }),
   commentsApi.create
 );
-router.get(
+router.delete(
   "/destroy/:id",
   passport.authenticate("jwt", { session: false }),
   commentsApi.destroy
