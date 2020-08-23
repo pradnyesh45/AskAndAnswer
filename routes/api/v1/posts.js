@@ -15,5 +15,6 @@ router.delete(
   passport.authenticate("jwt", { session: false }),
   postsApi.destroy
 );
+router.get("/", postsApi.index);
 
 module.exports = router;

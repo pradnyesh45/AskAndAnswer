@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
-import { startSignup, signup, clearAuthState } from "../actions/auth";
+import { startSingup, signup, clearAuthState } from "../actions/auth";
 
 class Signup extends Component {
   constructor(props) {
@@ -29,7 +29,7 @@ class Signup extends Component {
     const { email, password, confirmPassword, name } = this.state;
 
     if (email && password && confirmPassword && name) {
-      this.props.dispatch(startSignup());
+      this.props.dispatch(startSingup());
       this.props.dispatch(signup(email, password, confirmPassword, name));
     }
   };
@@ -62,20 +62,20 @@ class Signup extends Component {
         </div>
         <div className="field">
           <input
-            placeholder="Password"
-            type="password"
-            required
-            onChange={(e) => this.handleInputChange("password", e.target.value)}
-          />
-        </div>
-        <div className="field">
-          <input
             placeholder="Confirm password"
             type="password"
             required
             onChange={(e) =>
               this.handleInputChange("confirmPassword", e.target.value)
             }
+          />
+        </div>
+        <div className="field">
+          <input
+            placeholder="Password"
+            type="password"
+            required
+            onChange={(e) => this.handleInputChange("password", e.target.value)}
           />
         </div>
         <div className="field">

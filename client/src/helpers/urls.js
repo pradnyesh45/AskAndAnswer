@@ -1,6 +1,7 @@
-const proxyurl = "https://cors-anywhere.herokuapp.com/";
-const url = "http://localhost:8000/api/v1";
-const API_ROOT = proxyurl + url;
+// const proxyurl = "https://cors-anywhere.herokuapp.com/";
+const API_ROOT = "http://localhost:8000/api/v1";
+// const API_ROOT = proxyurl + url;
+// const API_ROOT = "http://codeial.com:8000/api/v2";
 
 export const APIUrls = {
   login: () => `${API_ROOT}/users/login`,
