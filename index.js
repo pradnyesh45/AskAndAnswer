@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const app = express();
 const port = 8000;
 const passport = require("passport");
-const passportJWT = require("./config/passport-jwt-strategy");
+// const passportJWT = require("./config/passport-jwt-strategy");
 const bodyParser = require("body-parser");
 
 app.use(
@@ -16,6 +16,10 @@ app.use(bodyParser.json());
 // Passport middleware
 app.use(passport.initialize());
 
+// Passport config
+require("./config/passport-jwt-strategy")(passport);
+
+// Routes
 app.use("/", require("./routes"));
 
 // DB Config

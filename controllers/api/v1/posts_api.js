@@ -51,10 +51,11 @@ module.exports.create = async function (req, res) {
     post = await post.populate("user", "name").execPopulate();
     // if (isCreated) {
     return res.status(200).json({
+      success: true,
       data: {
         post: post,
       },
-      message: "Post successfully created",
+      message: "Post created",
     });
   } catch (error) {
     console.log("******", error);
