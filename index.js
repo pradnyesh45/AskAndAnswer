@@ -5,6 +5,9 @@ const port = 8000;
 const passport = require("passport");
 // const passportJWT = require("./config/passport-jwt-strategy");
 const bodyParser = require("body-parser");
+var cors = require("cors");
+
+app.use(cors());
 
 app.use(
   bodyParser.urlencoded({

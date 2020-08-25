@@ -114,6 +114,7 @@ export function login(email, password) {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
+        Accept: "application/x-www-form-urlencoded",
       },
       body: getFormBody({ email, password }),
     })
@@ -181,6 +182,7 @@ export function signup(email, password, confirmPassword, name) {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
+        Accept: "application/x-www-form-urlencoded",
       },
       body: getFormBody({
         email,
