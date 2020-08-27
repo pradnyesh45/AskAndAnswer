@@ -27,6 +27,14 @@ module.exports.toggleLike = async function (req, res) {
 
       existingLike.remove();
       deleted = true;
+
+      return res.status(200).json({
+        message: "Request successful!",
+        success: true,
+        data: {
+          deleted: true,
+        },
+      });
     } else {
       // else make a new like
 
@@ -38,14 +46,15 @@ module.exports.toggleLike = async function (req, res) {
 
       likeable.likes.push(newLike._id);
       likeable.save();
-    }
 
-    return res.status(200).json({
-      message: "Like Request successful",
-      data: {
-        deleted: deleted,
-      },
-    });
+      return res.status(200).json({
+        message: "Request successful!",
+        success: true,
+        data: {
+          deleted: false,
+        },
+      });
+    }
   } catch (error) {
     console.log("******", error);
     return res.status(500).json({
@@ -53,3 +62,7 @@ module.exports.toggleLike = async function (req, res) {
     });
   }
 };
+
+// module.exports.index = function(req, res) {
+
+// }

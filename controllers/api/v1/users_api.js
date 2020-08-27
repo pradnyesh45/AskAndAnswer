@@ -2,6 +2,7 @@ const User = require("../../../models/user");
 const jwt = require("jsonwebtoken");
 const keys = require("../../../config/keys");
 const bcrypt = require("bcryptjs");
+const searchText = require("../../../routes/api/v1/users");
 
 // Load input validation
 const validateRegisterInput = require("../../../validation/register");
@@ -144,6 +145,48 @@ module.exports.createSession = function (req, res) {
       }
     });
   });
+};
+
+module.exports.getUser = async function (req, res) {
+  try {
+    let user = await User.findById(jwt_payload.id);
+    if (user) {
+      return res.status(200).json({
+        success: true,
+        data: {
+          user: {
+            _id: _id,
+            name: name,
+            email: email,
+          },
+        },
+      });
+    }
+  } catch (error) {
+    console.log("********", error);
+    return res.json(500, {
+      message: "Internal Server Error while getting user",
+    });
+  }
+};
+
+module.exports.search = async function (req, res) {
+  try {
+    let user = await User.findOne({ name: searchText });
+    if (user) {
+      return res.status(200).json({
+        success: true,
+        data: {
+          user: user,
+        },
+      });
+    }
+  } catch (error) {
+    console.log("********", error);
+    return res.json(500, {
+      message: "Internal Server Error while searching user",
+    });
+  }
 };
 
 // // coding ninjas signUp

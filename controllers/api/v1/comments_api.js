@@ -7,7 +7,7 @@ module.exports.create = async function (req, res) {
     let post = await Post.findById(req.body.post);
 
     if (post) {
-      let comment = await Answer.create({
+      let comment = await Comment.create({
         content: req.body.content,
         post: req.body.post,
         user: req.body._id,
@@ -16,13 +16,14 @@ module.exports.create = async function (req, res) {
       post.comments.push(comment);
       post.save();
 
-      comment = await answer.populate("user", "name").execPopulate();
+      comment = await comment.populate("user", "name").execPopulate();
 
       return res.status(200).json({
         data: {
           comment: comment,
         },
-        message: "Comment created to the Post",
+        message: "Your comment is published",
+        success: true,
       });
     }
   } catch (error) {
