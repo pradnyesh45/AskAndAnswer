@@ -13,6 +13,7 @@ import CreatePost from "./CreatePost";
 import Post from "./Post";
 import Comment from "./Comment";
 import Chat from "./Chat";
+import Shop from "./Shop";
 
 export {
   PostsList,
@@ -30,4 +31,5 @@ export {
   Post,
   Comment,
   Chat,
+  // Shop,
 };

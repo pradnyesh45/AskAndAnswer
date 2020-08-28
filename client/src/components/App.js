@@ -17,6 +17,7 @@ import {
   Signup,
   Settings,
   UserProfile,
+  Shop,
 } from "./";
 import * as jwtDecode from "jwt-decode";
 import { authenticateUser } from "../actions/auth";
@@ -95,6 +96,7 @@ class App extends React.Component {
             />
             <Route path="/login" component={Login} />
             <Route path="/signup" component={Signup} />
+            <Route path="/shop" component={Shop} />
             <PrivateRoute
               path="/settings"
               component={Settings}
