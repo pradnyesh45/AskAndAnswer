@@ -25,6 +25,9 @@ require("./config/passport-jwt-strategy")(passport);
 // Routes
 app.use("/", require("./routes"));
 
+// make the upload path available to the browser
+app.use("/public", express.static(__dirname + "/public"));
+
 // DB Config
 const db = require("./config/keys").mongoURI;
 

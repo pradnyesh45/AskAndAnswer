@@ -88,6 +88,9 @@ class Navbar extends React.Component {
                   <Link to="/signup">Register</Link>
                 </li>
               )}
+              <li>
+                <Link to="/shop">Shop</Link>
+              </li>
             </ul>
           </div>
         </div>

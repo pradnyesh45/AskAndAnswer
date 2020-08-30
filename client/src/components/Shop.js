@@ -67,11 +67,19 @@ class Shop extends Component {
             this.handleInputChange("phone_number", e.target.value)
           }
         />
+        <input
+          placeholder="Product Name"
+          type="text"
+          required
+          onChange={(e) =>
+            this.handleInputChange("product_name", e.target.value)
+          }
+        />
         <h1>Photo Upload</h1>
         <input
           type="file"
           className="custom-file-input"
-          name="my-image"
+          name="file"
           onchange={this.onChange}
         />
         {console.log(this.state.file)}
