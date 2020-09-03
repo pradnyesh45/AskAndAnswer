@@ -49,7 +49,7 @@ class Post extends Component {
           <div className="post-avatar">
             <Link to={`/user/${post.user._id}`}>
               <img
-                src="https://image.flaticon.com/icons/svg/2154/2154651.svg"
+                src="https://image.flaticon.com/icons/svg/3011/3011270.svg"
                 alt="user-pic"
               />
             </Link>

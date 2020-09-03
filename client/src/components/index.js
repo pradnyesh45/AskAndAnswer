@@ -31,5 +31,5 @@ export {
   Post,
   Comment,
   Chat,
-  // Shop,
+  Shop,
 };

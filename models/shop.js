@@ -8,23 +8,23 @@ const shopSchema = new mongoose.Schema(
   {
     _id: mongoose.Schema.Types.ObjectId,
     image: {
-      type: string,
+      type: String,
       required: true,
     },
     name: {
-      type: string,
+      type: String,
       required: true,
     },
     price: {
-      type: number,
+      type: Number,
       required: true,
     },
     phone_number: {
-      type: number,
+      type: Number,
       required: true,
     },
     product_name: {
-      type: string,
+      type: String,
       required: true,
     },
   },

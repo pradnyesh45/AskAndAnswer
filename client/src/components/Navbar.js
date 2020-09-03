@@ -48,7 +48,7 @@ class Navbar extends React.Component {
                   <li className="search-results-row" key={user._id}>
                     <Link to={`/user/${user._id}`}>
                       <img
-                        src="https://image.flaticon.com/icons/svg/2154/2154651.svg"
+                        src="https://image.flaticon.com/icons/svg/560/560216.svg"
                         alt="user-dp"
                       />
                       <span>{user.name}</span>
