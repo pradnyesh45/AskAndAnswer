@@ -6,8 +6,12 @@ const IMAGE_PATH = path.join("/public/uploads");
 
 const shopSchema = new mongoose.Schema(
   {
-    _id: mongoose.Schema.Types.ObjectId,
-    image: {
+    imageName: {
+      type: String,
+      default: "none",
+      required: true,
+    },
+    imageData: {
       type: String,
       required: true,
     },
@@ -46,5 +50,5 @@ let storage = multer.diskStorage({
 shopSchema.statics.uploadedImage = multer({ storage: storage }).single("image");
 shopSchema.statics.imagePath = IMAGE_PATH;
 
-const Shop = mongoose.model("Shop", shopSchema);
-module.exports = Shop;
+const Image = mongoose.model("Shop", shopSchema);
+module.exports = Image;

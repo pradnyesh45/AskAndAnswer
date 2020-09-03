@@ -25,6 +25,8 @@ require("./config/passport-jwt-strategy")(passport);
 // Routes
 app.use("/", require("./routes"));
 
+app.use("/uploads", express.static("uploads"));
+
 // make the upload path available to the browser
 app.use("/public", express.static(__dirname + "/public"));
 
