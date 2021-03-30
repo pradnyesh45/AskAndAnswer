@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
-const port = 8000;
+const port = process.env.PORT || 8000;
 const passport = require("passport");
 // const passportJWT = require("./config/passport-jwt-strategy");
 const bodyParser = require("body-parser");
