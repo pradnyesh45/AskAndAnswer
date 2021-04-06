@@ -9,7 +9,7 @@
     "server": "nodemon index.js",
     "client": "npm start --prefix client",
     "start": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "cd client && npm client-install && npm run client"
+    "heroku-postbuild": "cd client && npm client-install"
   },
   "author": "Pradnyesh Aglawe",
   "license": "ISC",
